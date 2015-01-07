@@ -2,10 +2,10 @@
 Change log for gocept.loginuser
 ===============================
 
-1.1 (unreleased)
-================
+1.0.1 (2015-01-07)
+==================
 
-- Nothing changed yet.
+- Fixed brown-bag release.
 
 
 1.0 (2015-01-07)
