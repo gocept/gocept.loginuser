@@ -2,7 +2,7 @@
 Change log for gocept.loginuser
 ===============================
 
-0.1 (unreleased)
+1.0 (2015-01-07)
 ================
 
 initial release
