@@ -1,0 +1,8 @@
+===============================
+Change log for gocept.loginuser
+===============================
+
+0.1 (unreleased)
+================
+
+initial release
