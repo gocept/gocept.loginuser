@@ -2,7 +2,7 @@
 Change log for gocept.loginuser
 ===============================
 
-1.1 (unreleased)
+1.1 (2015-02-09)
 ================
 
 - Allow for the password hash to specify the hashing algorithm inline (made
