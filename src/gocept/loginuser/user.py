@@ -55,7 +55,7 @@ class User(object):
         """Lock a user because of `reason`.
 
            Reason can be:
-               "MAXLOGINS": Too much unsuccessful login retries.
+               "MAXLOGINS": Too many unsuccessful login retries.
                "ADMIN": Locked by admin via admin ui.
         """
         reason_text = getattr(self, 'LOCK_STATUS_%s' % reason, None)
