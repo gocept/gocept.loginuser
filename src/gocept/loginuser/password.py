@@ -1,12 +1,13 @@
 import bcrypt
 import hashlib
+import six
 
 
 WORK_FACTOR = 12  # 12=bcrypt default
 
 
 HASH_FUNCTIONS = {
-    'sha256': lambda plain, hashed: hashlib.sha256(plain).hexdigest(),
+    'sha256': lambda plain, hashed: _encode(hashlib.sha256(plain).hexdigest()),
 }
 
 
@@ -24,7 +25,7 @@ def check(plain, hashed):
 
 def hash(plain):
     plain = _encode(plain)
-    return unicode(bcrypt.hashpw(plain, bcrypt.gensalt(WORK_FACTOR)))
+    return bcrypt.hashpw(plain, bcrypt.gensalt(WORK_FACTOR)).decode('ascii')
 
 
 def _constant_time_equal(a, b):
@@ -34,12 +35,16 @@ def _constant_time_equal(a, b):
         return False
 
     result = 0
-    for x, y in zip(a, b):
-        result |= ord(x) ^ ord(y)
+    if six.PY3:
+        for x, y in zip(a, b):
+            result |= x ^ y
+    else:
+        for x, y in zip(a, b):
+            result |= ord(x) ^ ord(y)
     return result == 0
 
 
 def _encode(text):
-    if isinstance(text, unicode):
+    if isinstance(text, six.text_type):
         text = text.encode('utf8')
     return text

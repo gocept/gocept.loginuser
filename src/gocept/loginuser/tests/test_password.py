@@ -1,5 +1,5 @@
-import bcrypt
 import hashlib
+import six
 import unittest
 
 
@@ -25,16 +25,16 @@ class PasswordHashingTest(unittest.TestCase):
     def test_hash_accepts_and_returns_unicode(self):
         import gocept.loginuser.password
         hashed = gocept.loginuser.password.hash(u'mypassword')
-        self.assertIsInstance(hashed, unicode)
+        self.assertIsInstance(hashed, six.text_type)
 
     def test_sha256_password_is_recognised(self):
         import gocept.loginuser.password
-        hashed = hashlib.sha256('asdf').hexdigest()
+        hashed = hashlib.sha256(b'asdf').hexdigest()
         self.assertTrue(gocept.loginuser.password.check(
             'asdf', 'sha256:' + hashed))
 
     def test_password_check_defaults_to_bcrypt(self):
         import gocept.loginuser.password
-        hashed = bcrypt.hashpw('asdf', bcrypt.gensalt(12)).encode('utf8')
+        hashed = gocept.loginuser.password.hash(u'asdf')
         self.assertTrue(gocept.loginuser.password.check(
             'asdf', hashed))
