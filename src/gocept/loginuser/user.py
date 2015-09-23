@@ -42,7 +42,10 @@ class User(object):
 
     @password.setter
     def password(self, value):
-        self.encrypted_password = gocept.loginuser.password.hash(value)
+        self.encrypted_password = self.hash_password(value)
+
+    def hash_password(self, value):
+        return gocept.loginuser.password.hash(value)
 
     def check_password(self, plain):
         return gocept.loginuser.password.check(plain, self.password)
