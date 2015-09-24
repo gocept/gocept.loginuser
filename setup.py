@@ -17,7 +17,7 @@ def project_path(*names):
 
 setup(
     name='gocept.loginuser',
-    version='1.2.dev0',
+    version='1.2',
 
     install_requires=[
         'setuptools',

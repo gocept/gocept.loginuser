@@ -2,7 +2,7 @@
 Change log for gocept.loginuser
 ===============================
 
-1.2 (unreleased)
+1.2 (2015-09-24)
 ================
 
 - Add support for Python 3.3 up to 3.5.
