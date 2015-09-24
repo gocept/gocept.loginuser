@@ -11,6 +11,7 @@ syntax: glob
 .tox
 bin
 build
+coverage.xml
 develop-eggs
 dist
 doc/_api
