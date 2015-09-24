@@ -45,13 +45,24 @@ setup(
 
     keywords='Sqlalchemy user password login',
     classifiers="""\
+Development Status :: 5 - Production/Stable
+Intended Audience :: Developers
+License :: OSI Approved
+Natural Language :: English
+Topic :: Database
+Topic :: Software Development
+Operating System :: OS Independent
 License :: OSI Approved :: Zope Public License
+Programming Language :: Python :: Implementation
+Programming Language :: Python :: Implementation :: CPython
 Programming Language :: Python
 Programming Language :: Python :: 2
 Programming Language :: Python :: 2.6
 Programming Language :: Python :: 2.7
+Programming Language :: Python :: 3
 Programming Language :: Python :: 3.3
 Programming Language :: Python :: 3.4
+Programming Language :: Python :: 3.5
 """[:-1].split('\n'),
     description=__doc__.strip(),
     long_description='\n\n'.join(open(project_path(name)).read() for name in (

@@ -5,9 +5,6 @@ Developing gocept.loginuser
 :Author:
     `gocept <http://gocept.com/>`_ <mail@gocept.com>
 
-:Online documentation:
-    https://pythonhosted.org/gocept.loginuser/
-
 :PyPI page:
     https://pypi.python.org/pypi/gocept.loginuser
 
