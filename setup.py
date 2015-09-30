@@ -17,13 +17,14 @@ def project_path(*names):
 
 setup(
     name='gocept.loginuser',
-    version='1.3.dev0',
+    version='2.0.dev0',
 
     install_requires=[
-        'setuptools',
-        'sqlalchemy',
+        'AuthEncoding >= 4.0',
         'bcrypt',
+        'setuptools',
         'six',
+        'sqlalchemy',
     ],
 
     extras_require={
