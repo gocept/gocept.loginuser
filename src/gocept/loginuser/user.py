@@ -1,6 +1,6 @@
 # encoding=utf-8
 from sqlalchemy import Column, Integer, String, DateTime
-import gocept.loginuser.password
+import AuthEncoding
 
 
 class InvalidLockReasonError(ValueError):
@@ -16,6 +16,7 @@ class User(object):
 
     LOCK_STATUS_MAXLOGINS = 'Zu viele fehlerhafte Login-Versuche'
     LOCK_STATUS_ADMIN = 'Gesperrt durch Administrator'
+    DEFAULT_PASSWORD_SCHEME = u'BCRYPT'
 
     username = Column(String(254), unique=True)
     encrypted_password = Column('password', String(80))
@@ -45,10 +46,10 @@ class User(object):
         self.encrypted_password = self.hash_password(value)
 
     def hash_password(self, value):
-        return gocept.loginuser.password.hash(value)
+        return AuthEncoding.pw_encrypt(value, self.DEFAULT_PASSWORD_SCHEME)
 
-    def check_password(self, plain):
-        return gocept.loginuser.password.check(plain, self.password)
+    def check_password(self, attempt):
+        return AuthEncoding.pw_validate(self.password, attempt)
 
     @property
     def authenticated(self):

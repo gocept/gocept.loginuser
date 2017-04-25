@@ -15,4 +15,4 @@ Developing gocept.loginuser
     https://bitbucket.org/gocept/gocept.loginuser
 
 :Current change log:
-    https://bitbucket.org/gocept/gocept.loginuser/raw-file/tip/CHANGES.txt
+    https://bitbucket.org/gocept/gocept.loginuser/raw/tip/CHANGES.txt
