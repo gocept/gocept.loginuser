@@ -12,7 +12,7 @@ import glob
 
 setup(
     name='gocept.loginuser',
-    version='2.0.dev0',
+    version='2.0',
     install_requires=[
         'AuthEncoding >= 4.0',
         'bcrypt',
