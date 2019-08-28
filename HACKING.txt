@@ -12,7 +12,7 @@ Developing gocept.loginuser
     `report by e-mail <mail@gocept.com>`_
 
 :Source code:
-    https://bitbucket.org/gocept/gocept.loginuser
+    https://github.com/gocept/gocept.loginuser
 
 :Current change log:
-    https://bitbucket.org/gocept/gocept.loginuser/raw/tip/CHANGES.txt
+    https://raw.githubusercontent.com/gocept/gocept.loginuser/master/CHANGES.txt

@@ -36,7 +36,7 @@ setup(
     author='gocept <mail@gocept.com>',
     author_email='mail@gocept.com',
     license='ZPL 2.1',
-    url='https://bitbucket.org/gocept/gocept.loginuser/',
+    url='https://github.com/gocept/gocept.loginuser',
 
     keywords='Sqlalchemy user password login',
     classifiers="""\

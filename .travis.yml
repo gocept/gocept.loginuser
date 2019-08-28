@@ -1,0 +1,19 @@
+language: python
+python:
+- 2.7
+- 3.6
+- CPython
+install:
+- pip install -U setuptools zc.buildout setuptools-scm tox-travis
+- buildout -n
+script:
+- bin/test --cache-clear --cov-report term-missing --cov src
+- tox
+after_success: 
+cache:
+  pip: true
+  directories:
+  - eggs/
+notifications:
+  webhooks:
+    secure: An+KFS0IZhmDNG3nk9yZTMjI22C9agvubzksP2q0qJih/T10rassyoDTqf98zAv4Vj37SrU6v2MnyEG+H8bnmK7AvLFUkhmkruxnmiIoLfLG4QKN2Dt9BL8LwkmiH58ZX5V8hBAh9NjR1nshwXiY7kqh6RLq+xqWglW0WtkWLxOHevj9k9oGRuq6rd915qlZdw81g6Ii6qVtob5hKCdimEsVAVzTOW1beSOfy66jnYjGxiIzjQPmJUvDZX1+2O3KXb0K8XpK1vxIE6puI4TgL/ZCmgBlYkfTw9vkWi3pj4k6WFKQhbZkf0fhegsllahG5siusSUDfE9WxHUZcbFUI1txxBv0LF+fJw2ywTin/SWCjD389x0R8tZAiIXq+ncxQreO80nZcB58Tk4OuBp/AEzZqnLvXbdcsCO7jSpwFODXbbd4K5Svz4myRDrN/kIsP2WPUbrDXFHBzIFBnlaW0XumjZGg9gT01y/ejchZYTrrctwoOVr9vHqX+9AYXz6eVi1h/KcJQh3RHf1T1nCREpR3M9Bqzz5fMSOIfv3flw8irydhlo/mzFEik6VDn1VevnV7CTrZ3jJA3cmfq9NUBlPsdW8Ftd7ETegpPUUpMvtHE01MuCdcvaN/qeQ4OfLrlMhkHnj33P2gH59KaH6Bnp3dkJ/+GW5MtVojhVnUWV8=
