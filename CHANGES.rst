@@ -5,9 +5,11 @@ Change log for gocept.loginuser
 2.1 (unreleased)
 ================
 
-- Nothing changed yet.
-
 - Migrate to Github.
+
+- Drop support for Python 3.4.
+
+- Add support for Python 3.7 and 3.8.
 
 
 2.0 (2018-02-16)
