@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 from AuthEncoding.compat import b
 from AuthEncoding import constant_time_compare
 import bcrypt
