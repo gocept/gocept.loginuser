@@ -2,6 +2,12 @@
 Change log for gocept.loginuser
 ===============================
 
+2.2 (unreleased)
+================
+
+- Nothing changed yet.
+
+
 2.1 (2021-01-07)
 ================
 
