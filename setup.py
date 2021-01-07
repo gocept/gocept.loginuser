@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gocept.loginuser',
-    version='2.1.dev0',
+    version='2.1',
     install_requires=[
         'AuthEncoding >= 4.0',
         'bcrypt',

@@ -2,7 +2,7 @@
 Change log for gocept.loginuser
 ===============================
 
-2.1 (unreleased)
+2.1 (2021-01-07)
 ================
 
 - Drop support for Python 3.4.
