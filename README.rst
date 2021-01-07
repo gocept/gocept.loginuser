@@ -9,4 +9,4 @@ The gocept.loginuser distribution
 
 Sqlalchemy user object and password management.
 
-This package is compatible with Python version 3.6 up to 3.8 and PyPy3.
+This package is compatible with Python version 3.6 up to 3.9 and PyPy3.

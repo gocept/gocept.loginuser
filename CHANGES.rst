@@ -7,6 +7,8 @@ Change log for gocept.loginuser
 
 - Drop support for Python 2 and 3.5.
 
+- Add support for Python 3.9.
+
 
 2.1 (2021-01-07)
 ================

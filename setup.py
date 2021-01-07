@@ -53,6 +53,7 @@ Programming Language :: Python :: 3
 Programming Language :: Python :: 3.6
 Programming Language :: Python :: 3.7
 Programming Language :: Python :: 3.8
+Programming Language :: Python :: 3.9
 """[:-1].split('\n'),
     description=__doc__.strip(),
     long_description='\n\n'.join(open(name).read() for name in (
