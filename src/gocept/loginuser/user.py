@@ -1,4 +1,3 @@
-# encoding=utf-8
 from sqlalchemy import Column, Integer, String, DateTime
 import AuthEncoding
 
@@ -12,17 +11,17 @@ class InvalidLockReasonError(ValueError):
         return "%s is not a valid lock reason." % self.reason
 
 
-class User(object):
+class User:
 
     LOCK_STATUS_MAXLOGINS = 'Zu viele fehlerhafte Login-Versuche'
     LOCK_STATUS_ADMIN = 'Gesperrt durch Administrator'
-    DEFAULT_PASSWORD_SCHEME = u'BCRYPT'
+    DEFAULT_PASSWORD_SCHEME = 'BCRYPT'
 
     username = Column(String(254), unique=True)
     encrypted_password = Column('password', String(80))
 
     failed_logins = Column(Integer, nullable=False, server_default='0')
-    is_locked = Column(String(50), default=u'')
+    is_locked = Column(String(50), default='')
     last_login = Column(DateTime, nullable=True)
 
     @classmethod
@@ -30,7 +29,7 @@ class User(object):
         username = kw.get('username')
         if username is not None:
             kw['username'] = username.lower()
-        return super(User, cls).create(**kw)
+        return super().create(**kw)
 
     @classmethod
     def by_username(cls, username):

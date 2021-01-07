@@ -1,4 +1,3 @@
-# encoding=utf-8
 import AuthEncoding
 # Run AuthEncoding tests against our BCrypt implementation
 from AuthEncoding.tests.test_AuthEncoding import (  # noqa
@@ -8,4 +7,4 @@ from AuthEncoding.tests.test_AuthEncoding import (  # noqa
 
 def test_bcrypt__BCryptScheme__1():
     """BCryptScheme is registered in AuthEncoding."""
-    assert u'BCRYPT' in AuthEncoding.listSchemes()
+    assert 'BCRYPT' in AuthEncoding.listSchemes()
