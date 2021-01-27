@@ -1,5 +1,5 @@
-from AuthEncoding.compat import b
 from AuthEncoding import constant_time_compare
+from AuthEncoding.compat import b
 import bcrypt
 
 

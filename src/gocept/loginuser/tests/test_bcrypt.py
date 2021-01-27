@@ -1,8 +1,10 @@
-import AuthEncoding
 # Run AuthEncoding tests against our BCrypt implementation
-from AuthEncoding.tests.test_AuthEncoding import (  # noqa
-    testGoodPassword, testBadPassword, testShortPassword, testLongPassword,
-    testBlankPassword)
+from AuthEncoding.tests.test_AuthEncoding import testBadPassword  # noqa
+from AuthEncoding.tests.test_AuthEncoding import testBlankPassword  # noqa
+from AuthEncoding.tests.test_AuthEncoding import testGoodPassword  # noqa
+from AuthEncoding.tests.test_AuthEncoding import testLongPassword  # noqa
+from AuthEncoding.tests.test_AuthEncoding import testShortPassword  # noqa
+import AuthEncoding
 
 
 def test_bcrypt__BCryptScheme__1():
