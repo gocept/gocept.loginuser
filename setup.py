@@ -14,7 +14,7 @@ setup(
     version='3.0.dev0',
     python_requires='>=3.6, <4',
     install_requires=[
-        'AuthEncoding >= 4.0',
+        'AuthEncoding > 4.2',
         'bcrypt',
         'setuptools',
         'sqlalchemy',
