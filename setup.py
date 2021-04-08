@@ -11,7 +11,7 @@ from setuptools import setup
 
 setup(
     name='gocept.loginuser',
-    version='3.0',
+    version='3.1.dev0',
     python_requires='>=3.6, <4',
     install_requires=[
         'AuthEncoding > 4.2',
